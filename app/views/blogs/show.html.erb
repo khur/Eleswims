@@ -19,6 +19,6 @@
 
 <p><%= link_to "Back", blogs_path %></p>
 
-<%# if current_user && current_user.administrator %>
+<% if current_user && current_user.administrator %>
 	<p><%= link_to "Edit", edit_blog_path %></p>
-<%# end %>
+<% end %>

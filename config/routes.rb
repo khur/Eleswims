@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # Root Route
 
   root 'blogs#index'
@@ -40,6 +40,12 @@ Rails.application.routes.draw do
   # Comment Routes
 
   # Login Routes
+
+  get 'login' => 'sessions#new'
+
+  post 'login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy'
   
 
 

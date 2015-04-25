@@ -6,6 +6,6 @@
 		<p><%= blog.body %></p>
 	<% end %>
 </div>
-<%# if current_user && current_user.administrator %>
+<% if current_user && current_user.administrator %>
 <p><%= link_to "Add Blog", new_blog_path %></p>
-<%# end %>
+<% end %>
