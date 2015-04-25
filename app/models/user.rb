@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :blogs
 
 
   attr_reader :password
@@ -27,5 +28,5 @@ class User < ActiveRecord::Base
     self.username = self.username.downcase
     self.email = self.email.downcase
   end
-  
+
 end

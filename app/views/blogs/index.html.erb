@@ -1,0 +1,11 @@
+<h1>Ele Swims</h1>
+
+<div>
+	<% @blogs.each do |blog|%>
+		<p><%= link_to blog.title, blog_path(blog) %></p>
+		<p><%= blog.body %></p>
+	<% end %>
+</div>
+<%# if current_user && current_user.administrator %>
+<p><%= link_to "Add Blog", new_blog_path %></p>
+<%# end %>

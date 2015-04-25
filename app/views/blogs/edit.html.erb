@@ -1,0 +1,7 @@
+<h1>Edit a Blog</h1>
+
+
+<%= render 'blog_form' %>
+
+<p><%= link_to 'Home', blogs_path %></p>
+<p><%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: "sure?"} %></p>

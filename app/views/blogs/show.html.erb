@@ -1,0 +1,24 @@
+<h1><%= @blog.title %></h1>
+
+<p><%= @blog.body %></p>
+
+<%# @blog.comments.each do |comment|%>
+	
+	<p><%#= comment.body %> -
+	<%# if comment.user == nil %>
+		<!-- Anon -->
+	<%# else %>
+		<%#= comment.user.username %></p>
+	<%# end %>
+	<%#= link_to "delete", delete_comment_path(comment), method: :delete %>
+
+<%# end %>
+
+<%#= render 'comments/form' %>
+	
+
+<p><%= link_to "Back", blogs_path %></p>
+
+<%# if current_user && current_user.administrator %>
+	<p><%= link_to "Edit", edit_blog_path %></p>
+<%# end %>

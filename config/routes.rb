@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
   # Root Route
 
+  root 'blogs#index'
 
   # User Routes
 
@@ -20,11 +22,25 @@ Rails.application.routes.draw do
 
   #Blog Routes
 
+  get 'blogs/' => 'blogs#index'
+
+  get 'blogs/:id/edit' => 'blogs#edit', as: :edit_blog
+  
+  get 'blogs/new' => 'blogs#new', as: :new_blog
+
+  post 'blogs/' => 'blogs#create'
+
+  get 'blogs/:id' => 'blogs#show', as: :blog
+
+  patch 'blogs/:id' => 'blogs#update'
+
+  delete 'blogs/:id' => 'blogs#destroy'
 
 
   # Comment Routes
 
-
+  # Login Routes
+  
 
 
 end
