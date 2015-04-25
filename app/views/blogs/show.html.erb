@@ -2,19 +2,22 @@
 
 <p><%= @blog.body %></p>
 
-<%# @blog.comments.each do |comment|%>
+<% @blog.comments.each do |comment|%>
 	
-	<p><%#= comment.body %> -
-	<%# if comment.user == nil %>
-		<!-- Anon -->
-	<%# else %>
-		<%#= comment.user.username %></p>
-	<%# end %>
-	<%#= link_to "delete", delete_comment_path(comment), method: :delete %>
+	<p><%= comment.body %> -
+		<% if comment.user == nil %>
+			Anon
+		<% else %>
+			<%= comment.user.username %></p>
+		<% end %>
 
-<%# end %>
+		<% if comment.user == current_user || current_user.administrator %>
+			<%= link_to "delete", delete_comment_path(comment), method: :delete %>
+		<% end %>
 
-<%#= render 'comments/form' %>
+	<% end %>
+
+<%= render 'comments/comment_form' %>
 	
 
 <p><%= link_to "Back", blogs_path %></p>

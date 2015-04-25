@@ -9,13 +9,13 @@ class BlogsController < ApplicationController
 
     def show
       @blog = Blog.find(params[:id])
-      # @comments = Comment.all
-      # @comment = Comment.new
+      @comments = Comment.all
+      @comment = Comment.new
     end
 
     def create
       @blog = Blog.new(blog_params)
-      # @blog.user = current_user
+      @blog.user = current_user
       if @blog.save
         redirect_to blogs_path
       else

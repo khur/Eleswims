@@ -39,6 +39,11 @@ Rails.application.routes.draw do
 
   # Comment Routes
 
+  post 'blogs/:id/comments' => 'comments#create', as: :blog_comments
+
+  delete 'comments/:id/' => "comments#destroy", as: :delete_comment
+
+
   # Login Routes
 
   get 'login' => 'sessions#new'
