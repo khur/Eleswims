@@ -50,7 +50,7 @@ class BlogsController < ApplicationController
     private 
 
     def blog_params
-      params.require(:blog).permit(:title, :body )
+      params.require(:blog).permit(:title, :body, :image )
     end
 
     def edit_authorized? 

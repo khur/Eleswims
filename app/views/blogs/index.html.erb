@@ -3,6 +3,7 @@
 <div>
 	<% @blogs.each do |blog|%>
 		<p><%= link_to blog.title, blog_path(blog) %></p>
+		<%= image_tag blog.image.url(:thumb) %>
 		<p><%= blog.body %></p>
 	<% end %>
 </div>

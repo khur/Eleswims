@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :blogs
-  has_many :comments
+  has_many :blogs, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
       false
     end
   end
+
+  validates :first_name, :last_name, :username, presence: true
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+  validates :password, presence: true, confirmation: true, length: { in: 6..20 }
 
   private
 
