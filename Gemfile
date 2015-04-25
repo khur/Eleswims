@@ -46,3 +46,13 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
+gem 'paperclip', "~> 4.2"
+
+
+
+
+
+
+
+
+

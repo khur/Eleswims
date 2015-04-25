@@ -42,16 +42,16 @@ class UsersController < ApplicationController
     if @user == current_user
        @user.destroy
       session.delete(:user_id)
-      redirect_to users_path
+      redirect_to blogs_path
     else
        @user.destroy
-      redirect_to users_path
+      redirect_to blogs_path
     end
   
   end
 
   private
   def user_params
-  params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :administrator )
+  params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :administrator, :image )
   end
 end
