@@ -11,7 +11,7 @@
 			<%= comment.user.username %></p>
 		<% end %>
 
-		<% if comment.user == current_user || current_user.administrator %>
+		<% if current_user && ( comment.user == current_user || current_user.administrator )%>
 			<%= link_to "delete", delete_comment_path(comment), method: :delete %>
 		<% end %>
 

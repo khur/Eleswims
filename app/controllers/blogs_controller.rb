@@ -1,4 +1,7 @@
 class BlogsController < ApplicationController
+  before_action :require_login, except: [:show, :index]
+  before_action :edit_authorized?, only: [:edit, :update]
+
   def index
       @blogs = Blog.all
     end
@@ -48,5 +51,12 @@ class BlogsController < ApplicationController
 
     def blog_params
       params.require(:blog).permit(:title, :body )
+    end
+
+    def edit_authorized? 
+      unless current_user.administrator == true ||current_user == Blog.find(params[:id]).user 
+        flash[:error] = "Not your blog!"
+        redirect_to blog_path
+      end
     end
 end
