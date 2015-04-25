@@ -1,0 +1,21 @@
+<h1>Sign up!</h1>
+
+<% if @user.errors.any?%>
+
+    <div>
+      <p><%= pluralize(@user.errors.count, "error")%> prevented you from signing up!</p>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg|%>
+          <li><%= msg.downcase%></li>
+        <% end %>
+
+      </ul>
+
+    </div>
+
+<% end %>
+
+<%= render 'user_form' %>
+
+<%= link_to 'Home', users_path %>

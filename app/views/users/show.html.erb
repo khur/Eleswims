@@ -1,0 +1,17 @@
+<h1><%= @user.first_name%> <%= @user.last_name%></h1>
+<div>
+	<div>
+		
+		
+		<p>Username: <%= @user.username%></p>
+		<p>Email: <%= @user.email%></p>	
+	</div>
+</div>
+
+<p>Admin: <%= @user.administrator %></p>
+<p><%= link_to 'Users', users_path %></p>
+
+<p><%= link_to 'Home', users_path %></p>
+<p><%= link_to "Edit", edit_user_path %></p>
+<p><%= link_to "Delete User", user_path, method: :delete, data: {confirm: "sure?"} %></p>
+
