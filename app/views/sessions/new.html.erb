@@ -1,20 +1,22 @@
-
-	<h1>Log in!</h1>
-
-	<%= form_for :login do |f| %>
-		<div>
-			<%= f.label :email%>
-			<%= f.text_field :email %>
-		</div>
-
-		<div>
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-		</div>
-
-		<%= f.submit "Log in" %>
-		
-	<% end %>
-
-
-	<%= link_to "Home", blogs_path %>
+<div class="loginContainer">
+	
+		<h1>Log in!</h1>
+	
+	<div>
+		<%= form_for :login, html: { class: "pure-form" } do |f|%>
+			<div class="pure-group">
+				<%#= f.label :email, class: "pure-input-1"%>
+				<%= f.text_field :email, class: "pure-input-1", placeholder: "email@example.com" %>
+			
+				<%#= f.label :password, class: "pure-input-1" %>
+				<%= f.password_field :password, class: "pure-input-1", placeholder: "password" %>
+			</div>
+			<div >
+			<%= f.submit "Log in", class: "pure-button  pure-input-1" %>
+			</div>
+		<% end %>
+	</div>
+	<div>
+		<%= link_to "skip >>", blogs_path, class: "skip" %>
+	</div>
+</div>

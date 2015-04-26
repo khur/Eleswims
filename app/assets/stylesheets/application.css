@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ .pure-button{
+	background: inherit;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+
