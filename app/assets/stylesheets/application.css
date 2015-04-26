@@ -13,6 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+#session-control{
+	display: flex;
+	justify-content: space-between;
+	width: 99%;
+	margin: 1% auto;
+	font-size: 1em;
+}
+
+#session-control > div > a{
+	color: black;
+	text-decoration: none;
+
+}
+.pure-menu{
+	text-align: center;	
+}
+
+.pure-menu-list{
+	
+}
+
+.pure-menu-item{
+	
+}
+
+
+
+
  .pure-button{
 	background: inherit;
 	border: 2px solid black;
