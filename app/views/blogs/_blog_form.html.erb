@@ -1,18 +1,18 @@
-<%= form_for @blog do |f| %>
-	<div>
-		<%= f.label :title%>
-		<%= f.text_field :title %>
-	</div>
 
-	<div>
-		<%= f.label :body %>
-		<%= f.text_area :body %>
-	</div>
+	<%= form_for @blog, html: {class: "pure-form"} do |f| %>
+		<div id="new-blog-form">
+			<fieldset class="pure-group">
+				<%#= f.label :title, class: "pure-input-1"%>
+				<%= f.text_field :title, class: "pure-input-1", placeholder: "blog title" %>
+			
+				<%#= f.label :body, class: "pure-input-1" %>
+				<%= f.text_area :body, class: "pure-input-1", placeholder: "blog body" %>
+			</fieldset>
+			<fieldset class="pure-controls">
+				<%#= f.label :image, class: "pure-input-1" %>
+				<%= f.file_field :image, class: "pure-input-1" %>
+			</fieldset>
 
-	<div>
-		<%= f.label :image %>
-		<%= f.file_field :image %>
-	</div>	
-
-	<%= f.submit "Submit" %>
-<% end %>
+			<%= f.submit "Submit", class: "pure-button" %>
+		</div>	
+	<% end %>
