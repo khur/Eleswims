@@ -48,6 +48,10 @@ end
 
 gem 'paperclip', "~> 4.2"
 
+gem 'figaro'
+
+gem 'aws-sdk', '~> 1.6'
+
 
 
 
