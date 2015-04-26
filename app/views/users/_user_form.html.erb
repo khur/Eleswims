@@ -34,12 +34,13 @@
 		<%= f.label :image %>
 		<%= f.file_field :image %>
 	</div>	
-	
+	<% if current_user && current_user.administrator %>
 	<div>
 		<%= f.label :administrator %>
 		<%= f.check_box :administrator %>
 
 	</div>
+	<% end %>
 
 
 
