@@ -1,20 +1,20 @@
-<h1>Log in!</h1>
 
-<%= form_for :login do |f| %>
-	<div>
-		<%= f.label :email%>
-		<%= f.text_field :email %>
-	</div>
+	<h1>Log in!</h1>
 
-	<div>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</div>
+	<%= form_for :login do |f| %>
+		<div>
+			<%= f.label :email%>
+			<%= f.text_field :email %>
+		</div>
 
-	<%= f.submit "Log in" %>
-	
-<% end %>
+		<div>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
 
-<br>
+		<%= f.submit "Log in" %>
+		
+	<% end %>
 
-<%= link_to "Home", blogs_path %>
+
+	<%= link_to "Home", blogs_path %>
