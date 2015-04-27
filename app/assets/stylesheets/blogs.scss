@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// New Blog View
+
+
 #new-blog-form{
 	width: 80%;
 	margin: 0 auto;
@@ -14,6 +18,7 @@
 	margin: 0 auto;
 }
 
+// Blog Index View
 header{
 	width: 80%;
 	margin: 0 auto;
@@ -25,6 +30,7 @@ header{
 .blog-container{
 	width: 80%;
 	margin: 0 auto;
+
 }
 
 .blog{
@@ -37,11 +43,22 @@ header{
 		font-size: 2em;
 		}
 	}
-	p{
-		border-bottom: 1px solid black;
-		padding: 1%;
-	}
+
 	img{
 		width: 75%;
 	}
+
+	h1{
+		text-align: left;
+	}
+
 }
+
+// Blog Show view
+
+textarea{
+	width: 30%;
+}
+
+
+

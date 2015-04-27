@@ -13,6 +13,10 @@
 			<div><h2><%= link_to blog.title, blog_path(blog) %></h2></div>
 			<%= image_tag blog.image %>
 			<p><%= blog.body %></p>
+			<% if current_user && current_user.administrator %>
+			<p><%= link_to "Delete Blog", blog_path(blog), method: :delete, data: {confirm: "sure?"} %></p>
+			<% end %>
+			<hr>
 		<% end %>
 	</div>
 	

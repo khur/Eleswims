@@ -14,7 +14,7 @@
  *= require_self
  */
 *{
-	font-weight: lighter;
+	font-weight: lighter; outline: none;
 }
 #session-control{
 	display: flex;

@@ -1,7 +1,16 @@
-<h1>Edit a Blog</h1>
+<%= render 'sessions/session_control_form' %>
+
+<div class="blog-container">
+
+	<h1>Edit a Blog</h1>
 
 
-<%= render 'blog_form' %>
+	<%= render 'blog_form' %>
 
-<p><%= link_to 'Home', blogs_path %></p>
-<p><%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: "sure?"} %></p>
+	<p><%= link_to "Delete Blog", blog_path, method: :delete, data: {confirm: "sure?"} %></p>
+	<p><%= link_to 'Back', blog_path %></p>
+	<p><%= link_to 'Home', blogs_path %></p>
+	
+
+
+</div>

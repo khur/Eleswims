@@ -1,27 +1,39 @@
-<h1><%= @blog.title %></h1>
-<%= image_tag @blog.image.url(:medium) %>
-<p><%= @blog.body %></p>
+<%= render 'sessions/session_control_form' %>
 
-<% @blog.comments.each do |comment|%>
+<div class="blog-container">
+
+	<div class="blog">
+
+		<h1><%= @blog.title %></h1>
+		<%= image_tag @blog.image %>
+		<p><%= @blog.body %></p>
 	
-	<p><%= comment.body %> -
-		<% if comment.user == nil %>
-			Anon
-		<% else %>
-			<%= comment.user.username %></p>
-		<% end %>
 
-		<% if current_user && ( comment.user == current_user || current_user.administrator )%>
-			<%= link_to "delete", delete_comment_path(comment), method: :delete %>
-		<% end %>
+	<% @blog.comments.each do |comment|%>
+		
+		<p><%= comment.body %> -
+			<% if comment.user == nil %>
+				Anon
+			<% else %>
+				<%= comment.user.username %>
+			<% end %>
 
+			<% if current_user && ( comment.user == current_user || current_user.administrator )%>
+				<%= link_to "delete", delete_comment_path(comment), method: :delete %>
+			<% end %></p>
+
+		<% end %>
+		<hr>
+	<% if logged_in? %>
+		<%= render 'comments/comment_form' %>
+	<% end %>
+	</div>
+
+	<p><%= link_to "Back", blogs_path %></p>
+
+	<% if current_user && current_user.administrator %>
+		<p><%= link_to "Edit", edit_blog_path %></p>
 	<% end %>
 
-<%= render 'comments/comment_form' %>
-	
 
-<p><%= link_to "Back", blogs_path %></p>
-
-<% if current_user && current_user.administrator %>
-	<p><%= link_to "Edit", edit_blog_path %></p>
-<% end %>
+</div>
