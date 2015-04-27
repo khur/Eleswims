@@ -16,13 +16,26 @@
 *{
 	font-weight: lighter; outline: none; 
 }
+.logo-header, .logo-header:hover{
+	width: 20%;
+	background: yellow;
+	border: none;
+}
+
+.log-in-out{
+	width: 25%;
+}
+
+
 #session-control{
 	display: flex;
 	justify-content: space-between;
-	width: 99%;
-	margin: 1% auto;
+	width: 98%;
+	margin: 1%;
 	font-size: 1em;
 }
+
+
 
 #session-control > div > a{
 	color: black;

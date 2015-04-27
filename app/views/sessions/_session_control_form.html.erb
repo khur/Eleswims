@@ -1,10 +1,16 @@
 <div id="session-control">
 	<% if logged_in? %>
-				<div>Welcome, <%= link_to current_user.first_name, user_path(current_user) %>!</div>
-				<%= link_to "Log out", logout_path, method: :delete %>
-				
-
-		<% else %>
-				<div><%= link_to "Login In", login_path  %> | <%= link_to "Sign up", signup_path  %></div>
+		<div>
+			<%= image_tag "EleSwimimages/backgrounds/ES_ORANGE.jpg", class: "logo-header" %>
+		</div>
+		<div class="log-in-out">
+			Welcome, <%= link_to "#{current_user.first_name}!", user_path(current_user) %>
+			<%= link_to "Log out", logout_path, method: :delete %>
+		</div>		
+	<% else %>
+		<div>
+			<%= image_tag "EleSwimimages/backgrounds/ES_ORANGE.jpg", class: "logo-header" %>
+		</div>	
+		<div class="log-in-out" ><%= link_to "Login In", login_path  %> | <%= link_to "Sign up", signup_path  %></div>
 	<% end %>
 </div>	
