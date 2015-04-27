@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :require_login, except: [:show, :index]
-  before_action :edit_authorized?, only: [:edit, :update]
+  before_action :require_login, except: [:show, :index ]
+  before_action :edit_authorized?, only: [:edit, :update, :new]
 
   def index
       @blogs = Blog.all
