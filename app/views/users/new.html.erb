@@ -1,21 +1,27 @@
-<h1>Sign up!</h1>
+<div class="signup-container">
+	<h1>Sign up</h1>
 
-<% if @user.errors.any?%>
+	<% if @user.errors.any?%>
 
-    <div>
-      <p><%= pluralize(@user.errors.count, "error")%> prevented you from signing up!</p>
+	    <div>
+	      <p><%= pluralize(@user.errors.count, "error")%> prevented you from signing up!</p>
 
-      <ul>
-        <% @user.errors.full_messages.each do |msg|%>
-          <li><%= msg.downcase%></li>
-        <% end %>
+	      <ul>
+	        <% @user.errors.full_messages.each do |msg|%>
+	          <li><%= msg.downcase%></li>
+	        <% end %>
 
-      </ul>
+	      </ul>
 
-    </div>
+	    </div>
 
-<% end %>
+	<% end %>
 
-<%= render 'user_form' %>
+	<%= render 'user_form' %>
+	
+	<div id="link-container">
+		<%= link_to 'login', login_path, class: "skip" %>
+		<%= link_to 'skip', blogs_path, class: "skip" %> 
+	</div>
+</div>
 
-<%= link_to 'Home', users_path %>

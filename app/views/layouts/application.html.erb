@@ -7,24 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<div id="session-control">
-			<% if logged_in? %>
-						<div>Welcome, <%= link_to current_user.first_name, user_path(current_user) %>!</div>
-						<%= link_to "Log out", logout_path, method: :delete, class: "pure-button" %>
-						
-
-				<% else %>
-						<div><%= link_to "Login In", login_path, class: "pure-button" %>  <%= link_to "Sign up", signup_path, class: "pure-button" %></div>
-			<% end %>
-		</div>	
-		
-	</header>				
-
 	<% if flash[:welcome] %>
 	    <h4><%= flash[:welcome] %></h4>
 	<% end %>
-
 
 	<% if flash[:error]%>
 	  <h4><%= flash[:error] %></h4>

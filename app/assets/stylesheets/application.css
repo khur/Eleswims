@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+*{
+	font-weight: lighter;
+}
 #session-control{
 	display: flex;
 	justify-content: space-between;
@@ -27,24 +29,11 @@
 	text-decoration: none;
 
 }
-.pure-menu{
-	text-align: center;	
-}
-
-.pure-menu-list{
-	
-}
-
-.pure-menu-item{
-	
-}
-
-
 
 
  .pure-button{
 	background: inherit;
-	border: 2px solid black;
+	border: 1px solid black;
 	border-radius: 5px;
 }
 

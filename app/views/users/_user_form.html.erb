@@ -1,49 +1,40 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, html: { class: "pure-form" } do |f| %>
 
-	<div>
-		<%= f.label :first_name %>
-		<%= f.text_field :first_name %>
-	</div>
+	<div class="pure-group">
+		<%#= f.label :first_name %>
+		<%= f.text_field :first_name, class: "pure-input-1", placeholder: "First Name" %>
+	
+		<%#= f.label :last_name %>
+		<%= f.text_field :last_name, class: "pure-input-1", placeholder: "Last Name" %>
+	
+		<%#= f.label :username %>
+		<%= f.text_field :username, class: "pure-input-1", placeholder: "Username" %>
+	
+		<%#= f.label :email %>
+		<%= f.text_field :email, class: "pure-input-1", placeholder: "email@example.com" %>
+	
+		<%#= f.label :password %>
+		<%= f.password_field :password, class: "pure-input-1", placeholder: "Password" %>
+	
+		<%#= f.label :password_comfirmation %>
+		<%= f.password_field :password_comfirmation, class: "pure-input-1", placeholder: "Confirm Password" %>
+	
+		<%#= f.label :image %>
+		<%= f.file_field :image, class: "pure-input-1" %>
+		
+		<% if current_user && current_user.administrator %>
+	
+		<%#= f.label :administrator %>
+		<%= f.check_box :administrator, class: "pure-checkbox", value: "Administrator?" %>
 
-	<div>
-		<%= f.label :last_name %>
-		<%= f.text_field :last_name %>
-	</div>
+		
+		<% end %>
 
-	<div>
-		<%= f.label :username %>
-		<%= f.text_field :username %>
-	</div>
-
-	<div>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-	</div>
-
-	<div>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</div>
-
-	<div>
-		<%= f.label :password_comfirmation %>
-		<%= f.password_field :password_comfirmation %>
-	</div>
-
-	<div>
-		<%= f.label :image %>
-		<%= f.file_field :image %>
+		<%= f.submit "Submit", class: "pure-button" %>
 	</div>	
-	<% if current_user && current_user.administrator %>
-	<div>
-		<%= f.label :administrator %>
-		<%= f.check_box :administrator %>
-
-	</div>
-	<% end %>
 
 
 
-	<%= f.submit "Submit" %>
+	
 
 <% end %>
