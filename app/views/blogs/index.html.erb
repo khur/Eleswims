@@ -1,17 +1,19 @@
 <%= render 'sessions/session_control_form' %>
 
 <header>
-<h1>Ele Swims</h1>
+	<h1>Ele Swims</h1>
 </header>
 
-
-<div>
-	<% @blogs.each do |blog|%>
-		<p><%= link_to blog.title, blog_path(blog) %></p>
-		<%= image_tag blog.image.url(:thumb) %>
-		<p><%= blog.body %></p>
+<div class="blog-container">
+	<% if current_user && current_user.administrator %>
+	<p><%= link_to "+ Add Blog", new_blog_path %></p>
 	<% end %>
+	<div class="blog">
+		<% @blogs.each do |blog|%>
+			<div><h2><%= link_to blog.title, blog_path(blog) %></h2></div>
+			<%= image_tag blog.image %>
+			<p><%= blog.body %></p>
+		<% end %>
+	</div>
+	
 </div>
-<% if current_user && current_user.administrator %>
-<p><%= link_to "Add Blog", new_blog_path %></p>
-<% end %>

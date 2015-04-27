@@ -14,4 +14,34 @@
 	margin: 0 auto;
 }
 
+header{
+	width: 80%;
+	margin: 0 auto;
+	h1{
+		font-size: 4.5em;
+	}	
+}
 
+.blog-container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.blog{
+	
+	margin: 0 auto;
+	text-align: center;
+	div{
+		text-align: left;
+		h2{
+		font-size: 2em;
+		}
+	}
+	p{
+		border-bottom: 1px solid black;
+		padding: 1%;
+	}
+	img{
+		width: 75%;
+	}
+}
