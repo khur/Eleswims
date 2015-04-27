@@ -1,16 +1,27 @@
-<h1><%= @user.first_name%> <%= @user.last_name%></h1>
-<div>
-	<div>
-		<p>Username: <%= @user.username%></p>
-		<p>Email: <%= @user.email%></p>	
-		<%= image_tag @user.image.url(:medium)%>
+<%= render 'sessions/session_control_form' %>
+
+
+<div id="user-container">
+	<h1><%= @user.first_name%> <%= @user.last_name%></h1>
+	<div class="user">
+		<div>
+			<%= image_tag @user.image.url(:medium)%>
+		</div>
+		<div>
+			<p><strong>Username:</strong> <%= @user.username%></p>
+			<p><strong>Email:</strong> <%= @user.email%></p>	
+			<% if current_user && current_user.administrator %>
+				<p><strong>Admin:</strong> <%= @user.administrator %></p>
+				<p><strong><%= link_to 'Users', users_path %></strong></p>
+			<% end %>
+		</div>
 	</div>
+
+	<p><%= link_to 'Home', blogs_path %></p>
+	<p><%= link_to "Edit", edit_user_path %></p>
+	<p><%= link_to "Delete User", user_path, method: :delete, data: {confirm: "sure?"} %></p>
+
 </div>
 
-<p>Admin: <%= @user.administrator %></p>
-<p><%= link_to 'Users', users_path %></p>
 
-<p><%= link_to 'Home', blogs_path %></p>
-<p><%= link_to "Edit", edit_user_path %></p>
-<p><%= link_to "Delete User", user_path, method: :delete, data: {confirm: "sure?"} %></p>
 

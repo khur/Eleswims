@@ -1,6 +1,9 @@
-<h1>Hey <%= @user.first_name%>, Let's make some changes!</h1>
+<div class="user-container">
 
+	<h1>Info update <%= @user.first_name%>?</h1>
 
-<%= render 'user_form' %>
+	<%= render 'user_form' %>
 
-<%= link_to 'Home', users_path %>
+	<%= link_to 'Back', user_path %>
+
+</div>

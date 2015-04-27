@@ -11,12 +11,7 @@
 
 	<% @blog.comments.each do |comment|%>
 		
-		<p><%= comment.body %> -
-			<% if comment.user == nil %>
-				Anon
-			<% else %>
-				<%= comment.user.username %>
-			<% end %>
+		<p><%= comment.body %> - <%= comment.user.username %>
 
 			<% if current_user && ( comment.user == current_user || current_user.administrator )%>
 				<%= link_to "delete", delete_comment_path(comment), method: :delete %>
