@@ -14,7 +14,7 @@
  *= require_self
  */
 *{
-	font-weight: lighter; outline: none;
+	font-weight: lighter; outline: none; 
 }
 #session-control{
 	display: flex;
@@ -43,5 +43,20 @@ a:hover{
 
 img:hover{
 	border: 2px solid black;
+}
+
+.nav-container{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-container > div{
+	flex: 1;
+	padding: 1%;
+	margin: 1%;
+	text-align: center;
+
 }
 
