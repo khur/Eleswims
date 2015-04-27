@@ -24,15 +24,15 @@
 		
 		<% if current_user && current_user.administrator %>
 	
-		<%#= f.label :administrator %>
-		<%= f.check_box :administrator, class: "pure-checkbox", value: "Administrator?" %>
+		<%= f.label :administrator %>
+		<%= f.check_box :administrator, class: "pure-input-1 pure-checkbox" %>
 
-		
 		<% end %>
 
-		<%= f.submit "Submit", class: "pure-button" %>
+		
 	</div>	
-
+	
+	<%= f.submit "Submit", class: "pure-button" %>
 
 
 	
