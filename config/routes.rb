@@ -52,6 +52,11 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy'
   
+  # Static Pages Routes
 
+  get 'welcome' => 'static_pages#welcome'
 
+  get 'about' => 'static_pages#about'
+
+  get 'contact' => 'static_pages#contact'
 end

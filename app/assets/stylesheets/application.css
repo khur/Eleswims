@@ -16,13 +16,29 @@
 *{
 	font-weight: lighter; outline: none; 
 }
+body{
+	background: white;
+}
+
+
+header{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .logo-header, .logo-header:hover{
-	width: 20%;
+	width: 35%;
 	border: none;
+	margin: 0 auto;
+	box-shadow: 3px 3px 5px silver;
+	border-radius: 3px;
+
 }
 
 .log-in-out{
 	width: 25%;
+
 }
 
 
@@ -30,11 +46,20 @@
 	display: flex;
 	justify-content: space-between;
 	width: 98%;
-	margin: 1%;
+	margin: .5%;
+	padding-top: .5%;
 	font-size: 1em;
 }
 
-
+.page-container{
+	/*border: 1px solid black;*/
+	width: 98%;
+	margin: .5%;
+	border-radius: 3px;
+	background: white;
+	box-shadow: 1px 1px 15px silver;
+	min-height: 100vh;
+}
 
 #session-control > div > a{
 	color: black;
@@ -43,7 +68,7 @@
 }
 
 
- .pure-button{
+.pure-button{
 	background: inherit;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -72,3 +97,6 @@ img:hover{
 
 }
 
+.login{
+	width: 45%;
+}
