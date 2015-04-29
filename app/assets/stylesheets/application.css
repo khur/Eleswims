@@ -83,17 +83,21 @@ img:hover{
 }
 
 .nav-container{
-	width: 80%;
-	margin: 0 auto;
+	/*border: 1px solid black;*/
+	margin:  1% auto;
 	display: flex;
-	justify-content: center;
+	align-items: flex-start;
+	flex: 1;
+	flex-direction: column;
+	padding-top: 1.5%;
+
 }
 
 .nav-container > div{
-	flex: 1;
+	min-height: 5vh;
 	padding: 1%;
 	margin: 1%;
-	text-align: center;
+
 
 }
 

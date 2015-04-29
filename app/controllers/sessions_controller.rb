@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       user = User.find_by(email: params[:login][:email])
       if user && user.authenticate(params[:login][:password])
         session[:user_id] = user.id.to_s
-        flash[:welcome] = "Thank you for signing in #{current_user.first_name}!"
+        # flash[:welcome] = "Thank you for signing in #{current_user.first_name}!"
         redirect_to blogs_path
       else
         flash[:error] = "Email/Password are incorrect!"
