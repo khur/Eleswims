@@ -29,7 +29,7 @@ header{
 	text-align: center;
 }
 
- header > .logo-header{
+header > .logo-header{
 	width: 35%;
 	min-width: 250px;
 	border: none;
