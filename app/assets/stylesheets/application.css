@@ -82,7 +82,6 @@ img:hover{
 }
 
 .nav-container{
-	/*border: 1px solid black;*/
 	margin:  1% auto;
 	display: flex;
 	align-items: center;
@@ -96,6 +95,7 @@ img:hover{
 	min-height: 5vh;
 	padding: 1%;
 	margin: 1%;
+
 
 
 }
