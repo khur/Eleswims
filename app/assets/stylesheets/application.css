@@ -84,7 +84,7 @@ img:hover{
 
 .nav-container{
 	margin:  1% auto;
-	display: flex;
+	/*display: flex;*/
 	align-items: center;
 	flex: 1;
 	flex-direction: column;
