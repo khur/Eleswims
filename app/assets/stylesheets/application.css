@@ -16,6 +16,8 @@
 *{
 	font-weight: lighter; outline: none; 
 }
+
+
 body{
 	background: white;
 }
@@ -27,9 +29,9 @@ header{
 	text-align: center;
 }
 
-.logo-header, .logo-header:hover{
-	min-width: 200px;
+ header > .logo-header, .logo-header:hover{
 	width: 35%;
+	min-width: 250px;
 	border: none;
 	margin: 0 auto;
 	box-shadow: 3px 3px 5px silver;
