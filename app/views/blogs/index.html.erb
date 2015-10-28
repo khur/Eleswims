@@ -1,11 +1,9 @@
 	<%= render 'layouts/header' %>
 	<% if current_user && current_user.administrator %>
 		<p><%= link_to "+ Add Blog", new_blog_path %></p>
-		<% end %>
+		<% end %>   
 	<div class="blog-container">
-		
 
-		<%= render 'layouts/nav' %>
 		<div class="blog">
 			<% @blogs.reverse.each do |blog|%>
 				<div><h2><%= link_to blog.title, blog_path(blog) %></h2></div>
@@ -17,6 +15,6 @@
 				<hr>
 			<% end %>
 		</div>
-		
+		<%= render 'layouts/nav' %>
 	</div>
 </div>
